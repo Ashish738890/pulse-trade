@@ -1,0 +1,38 @@
+import { Zap, Wallet } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Header = () => {
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 glass-card border-t-0 border-x-0 rounded-none">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-monad to-accent flex items-center justify-center glow-monad">
+            <Zap className="w-5 h-5 text-background" />
+          </div>
+          <span className="font-display text-xl font-bold text-foreground">
+            Monad<span className="text-monad">Pulse</span>
+          </span>
+        </div>
+
+        <nav className="hidden md:flex items-center gap-8">
+          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+            How it Works
+          </a>
+          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+            Leaderboard
+          </a>
+          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+            Stats
+          </a>
+        </nav>
+
+        <Button variant="glass" size="sm" className="gap-2">
+          <Wallet className="w-4 h-4" />
+          Connect Wallet
+        </Button>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
