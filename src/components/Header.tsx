@@ -1,5 +1,5 @@
-import { Zap, Wallet } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Zap } from "lucide-react";
+import WalletButton from "./WalletButton";
 
 const Header = () => {
   return (
@@ -26,10 +26,7 @@ const Header = () => {
           </a>
         </nav>
 
-        <Button variant="glass" size="sm" className="gap-2">
-          <Wallet className="w-4 h-4" />
-          Connect Wallet
-        </Button>
+        <WalletButton />
       </div>
     </header>
   );
